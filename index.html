@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pothhole Finder - Home</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link active">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="report-problem.html" class="nav-link">Report Problem</a></li>
+                    <li><a href="track-issue.html" class="nav-link">Track Issue</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+                </ul>
+                <div class="user-profile">
+                    <a href="login-options.html" class="profile-btn">
+                        <div class="profile-icon"></div>
+                        <span>User Profile</span>
+                    </a>
+                </div>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <section class="hero">
+            <div class="hero-content">
+                <h1 class="hero-title">🚗 SAFER ROADS START HERE 🛣️<br>REPORT • TRACK • REPAIR</h1>
+                
+                <div class="hero-layout">
+                    <div class="hero-description">
+                        <p>🛣️ <strong>Spot a pothole? Report it instantly!</strong> Our advanced detection system helps you identify dangerous road conditions and alert authorities within minutes.</p>
+                        <p>📸 <strong>Quick Photo Reporting:</strong> Simply snap a photo, add location details, and submit your report. We'll handle the rest and ensure it reaches the right department.</p>
+                        <p>📍 <strong>Real-Time Tracking:</strong> Monitor your reports from submission to completion. Get updates when repairs are scheduled and finished.</p>
+                        <p>🏆 <strong>Make a Difference:</strong> Join thousands of citizens making roads safer. Every report helps prevent accidents and improves community infrastructure!</p>
+                    </div>
+                    
+                    <div class="hero-actions">
+                        <div class="action-card" onclick="window.location.href='report-problem.html'">
+                            <div class="action-icon camera-icon"></div>
+                            <div class="action-text">
+                                <span class="action-title">📸 Report Pothole</span>
+                            </div>
+                        </div>
+                        
+                        <div class="action-card" onclick="window.location.href='track-issue.html'">
+                            <div class="action-icon location-icon"></div>
+                            <div class="action-text">
+                                <span class="action-title">🔍 Find My Tracking ID</span>
+                            </div>
+                        </div>
+                        
+                        <div class="action-card" onclick="showTrackingHelp()">
+                            <div class="action-icon progress-icon"></div>
+                            <div class="action-text">
+                                <span class="action-title">📋 My Reports Status</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

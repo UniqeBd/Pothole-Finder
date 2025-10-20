@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pothhole Finder - Track Issue</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="report-problem.html" class="nav-link">Report Problem</a></li>
+                    <li><a href="track-issue.html" class="nav-link active">Track Issue</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+                </ul>
+                <div class="user-profile">
+                    <a href="login-options.html" class="profile-btn">
+                        <div class="profile-icon"></div>
+                        <span>User Profile</span>
+                    </a>
+                </div>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <section class="track-section">
+            <div class="container">
+                <div class="track-content">
+                    <div class="map-container">
+                        <div class="map-placeholder">
+                            <div class="map-header">
+                                <span class="map-tab active">Map</span>
+                                <span class="map-tab">Satellite</span>
+                            </div>
+                            <div class="map-content">
+                                <div class="location-marker"></div>
+                                <div class="map-labels">
+                                    <span class="location-label">Lakeheud University Secondary School</span>
+                                    <span class="location-label">Dhanmondi Lake</span>
+                                    <span class="location-label">CHEED Rd</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="track-form-container">
+                        <h1 class="page-title">Track Your Pothole Report</h1>
+                        
+                        <div class="tracking-help">
+                            <h3>📱 How to Find Your Tracking ID:</h3>
+                            <ul>
+                                <li>🔍 Check your email confirmation after submitting a report</li>
+                                <li>📄 Look for the ID in your browser history or screenshots</li>
+                                <li>📞 Contact us at +1-800-POTHOLE if you can't find it</li>
+                                <li>💡 Format: Usually 6-8 characters (e.g., PH123456)</li>
+                            </ul>
+                        </div>
+                        
+                        <form id="trackForm" class="track-form">
+                            <div class="form-group">
+                                <input type="text" id="reportId" name="reportId" class="form-control" placeholder="Enter Your Report ID (e.g., PH123456)" required>
+                            </div>
+                            
+                            <div class="progress-tracker">
+                                <div class="progress-step completed">
+                                    <div class="step-circle"></div>
+                                    <span class="step-label">Submitted</span>
+                                </div>
+                                <div class="progress-line completed"></div>
+                                <div class="progress-step completed">
+                                    <div class="step-circle"></div>
+                                    <span class="step-label">Verified</span>
+                                </div>
+                                <div class="progress-line active"></div>
+                                <div class="progress-step active">
+                                    <div class="step-circle"></div>
+                                    <span class="step-label">In Progress</span>
+                                </div>
+                                <div class="progress-line"></div>
+                                <div class="progress-step">
+                                    <div class="step-circle"></div>
+                                    <span class="step-label">Resolved</span>
+                                </div>
+                            </div>
+                            
+                            <div class="status-display">
+                                <span class="status-badge">Status In Progress</span>
+                            </div>
+                            
+                            <button type="submit" class="submit-btn">Submit</button>
+                            
+                            <div id="trackSuccessMessage" class="success-message hidden">
+                                ✓ Your report has been submitted
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

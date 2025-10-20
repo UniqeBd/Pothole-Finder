@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pothhole Finder - Government Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar dashboard-nav">
+            <div class="nav-container">
+                <h1 class="dashboard-title">Gov. Pothhole Finder Dashboard</h1>
+                <div class="gov-icon">
+                    <div class="building-icon"></div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <section class="dashboard-section">
+            <div class="container">
+                <div class="stats-container">
+                    <div class="stat-card total">
+                        <h3>Total Reports</h3>
+                        <span class="stat-number">20</span>
+                    </div>
+                    
+                    <div class="stat-card pending">
+                        <h3>Pending Reports</h3>
+                        <span class="stat-number">4</span>
+                    </div>
+                    
+                    <div class="stat-card resolved">
+                        <h3>Resolves Reports</h3>
+                        <span class="stat-number">16</span>
+                    </div>
+                </div>
+                
+                <div class="reports-table">
+                    <div class="table-header">
+                        <span>Photo</span>
+                        <span>Area</span>
+                        <span>Category</span>
+                        <span>Status</span>
+                        <span>Date</span>
+                        <span>Action</span>
+                    </div>
+                    
+                    <div class="table-row">
+                        <div class="photo-cell">
+                            <div class="report-photo garbage-photo"></div>
+                        </div>
+                        <span class="area-cell">Dhanmondi</span>
+                        <span class="category-cell garbage">Garbage</span>
+                        <span class="status-cell pending">● Pending</span>
+                        <span class="date-cell">Jun 02</span>
+                        <button class="action-btn verify">Verify</button>
+                    </div>
+                    
+                    <div class="table-row">
+                        <div class="photo-cell">
+                            <div class="report-photo road-photo"></div>
+                        </div>
+                        <span class="area-cell">Gulshan</span>
+                        <span class="category-cell road">Road</span>
+                        <span class="status-cell in-progress">● In Progress</span>
+                        <span class="date-cell">Jun 07</span>
+                        <button class="action-btn in-progress">InProgess</button>
+                    </div>
+                    
+                    <div class="table-row">
+                        <div class="photo-cell">
+                            <div class="report-photo light-photo"></div>
+                        </div>
+                        <span class="area-cell">Mirpur</span>
+                        <span class="category-cell light">Light</span>
+                        <span class="status-cell resolved">● Resolved</span>
+                        <span class="date-cell">Jun 19</span>
+                        <button class="action-btn resolved">Resolved</button>
+                    </div>
+                    
+                    <div class="table-row">
+                        <div class="photo-cell">
+                            <div class="report-photo scam-photo"></div>
+                        </div>
+                        <span class="area-cell">Uttara</span>
+                        <span class="category-cell scam">Scam</span>
+                        <span class="status-cell resolved">● Resolved</span>
+                        <span class="date-cell">Jun 20</span>
+                        <button class="action-btn resolved">Resolved</button>
+                    </div>
+                    
+                    <div class="table-row">
+                        <div class="photo-cell">
+                            <div class="report-photo garbage-photo"></div>
+                        </div>
+                        <span class="area-cell">Dhanmondi</span>
+                        <span class="category-cell garbage">Garbage</span>
+                        <span class="status-cell resolved">● Resolved</span>
+                        <span class="date-cell">Jun 17</span>
+                        <button class="action-btn resolved">Resolved</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

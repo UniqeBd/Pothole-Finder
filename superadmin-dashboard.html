@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pothhole Finder - SuperAdmin Control Panel</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar superadmin-nav">
+            <div class="nav-container">
+                <h1 class="dashboard-title">🔒 POTHHOLE FINDER SuperAdmin Control Panel</h1>
+                <div class="superadmin-controls">
+                    <span class="admin-badge">SUPERADMIN</span>
+                    <a href="superadmin-login.html" class="logout-btn">Logout</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <section class="superadmin-section">
+            <div class="container">
+                <!-- System Overview Stats -->
+                <div class="stats-container superadmin-stats">
+                    <div class="stat-card total-users">
+                        <h3>Total Users</h3>
+                        <span class="stat-number" id="totalUsers">125</span>
+                        <span class="stat-label">Registered Users</span>
+                    </div>
+                    
+                    <div class="stat-card total-gov">
+                        <h3>Government Users</h3>
+                        <span class="stat-number" id="totalGovUsers">8</span>
+                        <span class="stat-label">Authorized Officials</span>
+                    </div>
+                    
+                    <div class="stat-card total-reports">
+                        <h3>All Reports</h3>
+                        <span class="stat-number" id="allReports">347</span>
+                        <span class="stat-label">Total Submissions</span>
+                    </div>
+                    
+                    <div class="stat-card system-health">
+                        <h3>System Status</h3>
+                        <span class="stat-number status-online">🟢</span>
+                        <span class="stat-label">Online</span>
+                    </div>
+                </div>
+
+                <!-- Control Panels -->
+                <div class="control-panels">
+                    <!-- User Management Panel -->
+                    <div class="control-panel">
+                        <h2 class="panel-title">👥 User Management</h2>
+                        <div class="panel-actions">
+                            <button class="control-btn view-users" onclick="viewAllUsers()">View All Users</button>
+                            <button class="control-btn suspend-user" onclick="showSuspendUserModal()">Suspend User</button>
+                            <button class="control-btn delete-user" onclick="showDeleteUserModal()">Delete User</button>
+                            <button class="control-btn reset-password" onclick="showResetPasswordModal()">Reset Password</button>
+                        </div>
+                    </div>
+
+                    <!-- Report Management Panel -->
+                    <div class="control-panel">
+                        <h2 class="panel-title">📋 Report Management</h2>
+                        <div class="panel-actions">
+                            <button class="control-btn view-reports" onclick="viewAllReports()">View All Reports</button>
+                            <button class="control-btn modify-status" onclick="showModifyStatusModal()">Modify Status</button>
+                            <button class="control-btn delete-report" onclick="showDeleteReportModal()">Delete Report</button>
+                            <button class="control-btn export-data" onclick="exportReportsData()">Export Data</button>
+                        </div>
+                    </div>
+
+                    <!-- Government User Control -->
+                    <div class="control-panel">
+                        <h2 class="panel-title">🏛️ Government Control</h2>
+                        <div class="panel-actions">
+                            <button class="control-btn view-gov-users" onclick="viewGovUsers()">Manage Gov Users</button>
+                            <button class="control-btn create-gov-account" onclick="showCreateGovModal()">Create Gov Account</button>
+                            <button class="control-btn revoke-access" onclick="showRevokeAccessModal()">Revoke Access</button>
+                            <button class="control-btn audit-logs" onclick="viewAuditLogs()">Audit Logs</button>
+                        </div>
+                    </div>
+
+                    <!-- System Control -->
+                    <div class="control-panel critical">
+                        <h2 class="panel-title">⚙️ System Control</h2>
+                        <div class="panel-actions">
+                            <button class="control-btn backup-system" onclick="backupSystem()">Backup System</button>
+                            <button class="control-btn clear-cache" onclick="clearSystemCache()">Clear Cache</button>
+                            <button class="control-btn maintenance-mode" onclick="toggleMaintenanceMode()">Maintenance Mode</button>
+                            <button class="control-btn danger-btn reset-system" onclick="showResetSystemModal()">🚨 Reset System</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Data Display Area -->
+                <div id="dataDisplayArea" class="data-display-area hidden">
+                    <div class="data-header">
+                        <h3 id="dataTitle">Data Display</h3>
+                        <button class="close-btn" onclick="closeDataDisplay()">×</button>
+                    </div>
+                    <div id="dataContent" class="data-content">
+                        <!-- Dynamic content will be loaded here -->
+                    </div>
+                </div>
+
+                <!-- Modals will be dynamically created by JavaScript -->
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

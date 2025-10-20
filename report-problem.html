@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pothhole Finder - Report Problem</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="report-problem.html" class="nav-link active">Report Problem</a></li>
+                    <li><a href="track-issue.html" class="nav-link">Track Issue</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+                </ul>
+                <div class="user-profile">
+                    <a href="login-options.html" class="profile-btn">
+                        <div class="profile-icon"></div>
+                        <span>User Profile</span>
+                    </a>
+                </div>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <section class="report-section">
+            <div class="container">
+                <h1 class="page-title">Report a Problem</h1>
+                
+                <form id="reportForm" class="report-form">
+                    <div class="form-group">
+                        <select id="location" name="location" class="form-control" required>
+                            <option value="">Select Area / Location</option>
+                            <option value="dhanmondi">Dhanmondi</option>
+                            <option value="gulshan">Gulshan</option>
+                            <option value="mirpur">Mirpur</option>
+                            <option value="uttara">Uttara</option>
+                            <option value="old-dhaka">Old Dhaka</option>
+                            <option value="wari">Wari</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="photo" class="upload-label">
+                            <div class="upload-icon"></div>
+                            <span>Upload Photo</span>
+                        </label>
+                        <input type="file" id="photo" name="photo" accept="image/*" class="file-input">
+                    </div>
+
+                    <div class="form-group">
+                        <select id="category" name="category" class="form-control" required>
+                            <option value="">Problem Category</option>
+                            <option value="garbage">Garbage Collection</option>
+                            <option value="road">Road Condition</option>
+                            <option value="light">Street Light</option>
+                            <option value="water">Water Supply</option>
+                            <option value="drainage">Drainage Issue</option>
+                            <option value="scam">Scam/Fraud</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <textarea id="description" name="description" class="form-control" placeholder="Description" rows="5" required></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Submit</button>
+                    
+                    <div id="successMessage" class="success-message hidden">
+                        ✓ Your report has been submitted
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
